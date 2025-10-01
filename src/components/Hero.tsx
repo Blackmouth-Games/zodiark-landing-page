@@ -28,9 +28,9 @@ export const Hero = () => {
               style={{
                 left: `${Math.random() * 100}%`,
                 bottom: `${Math.random() * -10}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 4}s`,
-                '--spark-size': `${2 + Math.random() * 3}px`
+                animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${6 + Math.random() * 6}s`,
+                '--spark-size': `${4 + Math.random() * 6}px`
               } as React.CSSProperties}
             />
           ))}

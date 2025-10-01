@@ -109,14 +109,14 @@ All colors MUST be HSL.
 
   .fire-spark {
     position: absolute;
-    width: var(--spark-size, 3px);
-    height: var(--spark-size, 3px);
+    width: var(--spark-size, 6px);
+    height: var(--spark-size, 6px);
     background: hsl(31 100% 50%);
     border-radius: 50%;
     opacity: 0;
-    animation: fire-rise 5s ease-out infinite;
-    box-shadow: 0 0 6px hsl(31 100% 50%), 0 0 12px hsl(31 100% 50% / 0.6);
-    filter: blur(0.5px);
+    animation: fire-rise 8s ease-out infinite;
+    box-shadow: 0 0 10px hsl(31 100% 50%), 0 0 20px hsl(31 100% 50% / 0.6);
+    filter: blur(1px);
   }
 
   @keyframes fire-rise {
