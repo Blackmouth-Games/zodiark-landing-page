@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { Hero } from '@/components/Hero';
-import { SocialLinks } from '@/components/SocialLinks';
-import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { TrackerProvider } from '@/components/TrackerProvider';
 
 export const Landing = () => {
@@ -10,16 +8,8 @@ export const Landing = () => {
   return (
     <TrackerProvider eventName="lp_page_view">
       <div className="min-h-screen flex flex-col">
-        {/* Header */}
-        <header className="fixed top-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-lg border-b border-border">
-          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <SocialLinks />
-            <LanguageSwitcher />
-          </div>
-        </header>
-
         {/* Main Content */}
-        <main className="flex-1 pt-16">
+        <main className="flex-1">
           <Hero />
         </main>
 
