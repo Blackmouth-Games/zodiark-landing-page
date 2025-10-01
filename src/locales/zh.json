@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "headline": "唤醒你的命运，在群星中崛起，夺取方舟奖励",
+    "subheadline": "在 Telegram 上开始，<strong>领取限量掉落</strong>抢先获得。",
+    "cta": "免费游玩"
+  },
+  "nav": {
+    "community": "社区",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "x": "X"
+  },
+  "cookies": {
+    "banner": "我们使用 Cookie 来改善您的体验并分析我们的流量。",
+    "accept": "接受",
+    "decline": "拒绝"
+  },
+  "footer": {
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "rights": "© 2025 Zodiark. 保留所有权利。"
+  },
+  "thankYou": {
+    "headline": "欢迎来到宇宙之旅！",
+    "message": "您的星蛋正在等待。立即开始您的进化。",
+    "cta": "前往服务",
+    "cancel": "取消"
+  }
+}

@@ -13,7 +13,7 @@
   "cookies": {
     "banner": "Usamos cookies para mejorar tu experiencia y analizar nuestro tráfico.",
     "accept": "Aceptar",
-    "learnMore": "Más información"
+    "decline": "Rechazar"
   },
   "footer": {
     "privacy": "Política de Privacidad",

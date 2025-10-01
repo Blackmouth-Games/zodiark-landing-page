@@ -37,7 +37,7 @@ export const CookieBanner = () => {
             size="sm"
             onClick={() => setVisible(false)}
           >
-            {t('cookies.learnMore')}
+            {t('cookies.decline')}
           </Button>
           <Button
             size="sm"

@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "headline": "Éveillez Votre Destin, Élevez-vous Parmi les Étoiles et Remportez le Prix de l'Arche",
+    "subheadline": "Commencez sur Telegram pour <strong>réclamer les Drops Limités</strong> pour les premiers utilisateurs.",
+    "cta": "Jouer gratuitement"
+  },
+  "nav": {
+    "community": "Communauté",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "x": "X"
+  },
+  "cookies": {
+    "banner": "Nous utilisons des cookies pour améliorer votre expérience et analyser notre trafic.",
+    "accept": "Accepter",
+    "decline": "Refuser"
+  },
+  "footer": {
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "rights": "© 2025 Zodiark. Tous droits réservés."
+  },
+  "thankYou": {
+    "headline": "Bienvenue dans le Voyage Cosmique!",
+    "message": "Votre Œuf Astral vous attend. Commencez votre évolution maintenant.",
+    "cta": "Aller au service",
+    "cancel": "Annuler"
+  }
+}

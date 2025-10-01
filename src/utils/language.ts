@@ -2,7 +2,7 @@
  * Language utilities
  */
 
-export const SUPPORTED_LANGUAGES = ['en', 'es', 'pt', 'hi'] as const;
+export const SUPPORTED_LANGUAGES = ['en', 'es', 'pt', 'hi', 'fr', 'zh'] as const;
 export type Language = (typeof SUPPORTED_LANGUAGES)[number];
 export const DEFAULT_LANGUAGE: Language = 'en';
 
