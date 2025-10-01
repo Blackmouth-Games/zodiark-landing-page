@@ -18,6 +18,8 @@ export const LanguageSwitcher = () => {
     es: 'ES',
     pt: 'PT',
     hi: 'HI',
+    fr: 'FR',
+    zh: 'ZH',
   };
 
   const handleLanguageChange = (lang: Language) => {
