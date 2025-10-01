@@ -64,13 +64,13 @@ export const Hero = () => {
         />
 
         {/* Headline */}
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-6 text-glow max-w-5xl leading-tight">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-10 text-glow max-w-5xl leading-tight">
           {t('hero.headline')}
         </h1>
 
         {/* Subheadline */}
         <p 
-          className="text-sm md:text-lg lg:text-xl text-muted-foreground mb-8 md:mb-10 max-w-2xl"
+          className="text-sm md:text-lg lg:text-xl text-muted-foreground mb-10 md:mb-14 max-w-2xl"
           dangerouslySetInnerHTML={{ __html: t('hero.subheadline') }}
         />
 
