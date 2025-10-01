@@ -35,6 +35,19 @@ export const getLanguageFromQuery = (): Language | null => {
 };
 
 /**
+ * Detect browser language
+ */
+export const detectBrowserLanguage = (): Language => {
+  const browserLang = navigator.language.split('-')[0].toLowerCase();
+  
+  if (SUPPORTED_LANGUAGES.includes(browserLang as Language)) {
+    return browserLang as Language;
+  }
+  
+  return DEFAULT_LANGUAGE;
+};
+
+/**
  * Build path with language prefix
  */
 export const buildLanguagePath = (lang: Language, path: string = ''): string => {

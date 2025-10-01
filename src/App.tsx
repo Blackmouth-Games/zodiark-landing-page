@@ -8,7 +8,7 @@ import { Landing } from "./pages/Landing";
 import { ThankYou } from "./pages/ThankYou";
 import { CookieBanner } from "./components/CookieBanner";
 import { initializeUtm } from "./utils/utm";
-import { getLanguageFromQuery, buildLanguagePath, type Language, SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from "./utils/language";
+import { getLanguageFromQuery, buildLanguagePath, detectBrowserLanguage, type Language, SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from "./utils/language";
 import { useTranslation } from 'react-i18next';
 import './i18n/i18n';
 
@@ -42,6 +42,12 @@ const LanguageRoute = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
 
+// Auto-detect language redirect
+const AutoLanguageRedirect = () => {
+  const detectedLang = detectBrowserLanguage();
+  return <Navigate to={buildLanguagePath(detectedLang)} replace />;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -49,8 +55,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          {/* Root redirect to default language */}
-          <Route path="/" element={<Navigate to={buildLanguagePath(DEFAULT_LANGUAGE)} replace />} />
+          {/* Root redirect to auto-detected language */}
+          <Route path="/" element={<AutoLanguageRedirect />} />
           
           {/* Language-prefixed routes */}
           <Route path="/:lang" element={<LanguageRoute><Landing /></LanguageRoute>} />
