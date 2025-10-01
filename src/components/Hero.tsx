@@ -60,7 +60,7 @@ export const Hero = () => {
         <img
           src={zodiarkLogo}
           alt="Zodiark"
-          className="w-64 md:w-96 mb-8"
+          className="w-80 md:w-[28rem] mb-8"
         />
 
         {/* Headline */}
@@ -69,15 +69,16 @@ export const Hero = () => {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-10 max-w-2xl">
-          {t('hero.subheadline')}
-        </p>
+        <p 
+          className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-10 max-w-2xl"
+          dangerouslySetInnerHTML={{ __html: t('hero.subheadline') }}
+        />
 
         {/* CTA Button - Enhanced */}
         <Button
           size="lg"
           onClick={handleCtaClick}
-          className="group relative text-lg px-10 py-7 bg-primary hover:bg-primary text-primary-foreground shadow-cosmic transition-all hover:scale-105 hover:shadow-glow overflow-hidden font-bold"
+          className="group relative text-lg px-10 py-7 bg-primary hover:bg-primary text-primary-foreground shadow-cosmic transition-all hover:scale-105 hover:shadow-glow overflow-hidden font-bold animate-glow"
         >
           <span className="relative z-10 flex items-center gap-2">
             {t('hero.cta')}
