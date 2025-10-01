@@ -78,11 +78,11 @@ export const Hero = () => {
         <Button
           size="lg"
           onClick={handleCtaClick}
-          className="group relative text-base md:text-lg px-8 py-5 md:px-10 md:py-7 bg-primary hover:bg-primary text-primary-foreground shadow-cosmic transition-all hover:scale-105 hover:shadow-glow overflow-hidden font-bold animate-glow"
+          className="group relative text-xl md:text-lg px-10 py-7 md:px-10 md:py-7 bg-primary hover:bg-primary text-white md:text-primary-foreground shadow-cosmic transition-all hover:scale-105 hover:shadow-glow overflow-hidden font-bold animate-glow uppercase md:normal-case"
         >
           <span className="relative z-10 flex items-center gap-2">
             {t('hero.cta')}
-            <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ExternalLink className="w-6 h-6 md:w-5 md:h-5 transition-transform group-hover:translate-x-1" />
           </span>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
         </Button>
