@@ -17,7 +17,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-full flex items-center justify-center overflow-hidden">
       {/* Fire sparks background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="fire-sparks-container">
@@ -50,27 +50,27 @@ export const Hero = () => {
       </div>
 
       {/* Language Switcher - Top Right */}
-      <div className="absolute top-6 right-6 z-20">
+      <div className="absolute top-4 right-4 z-20">
         <LanguageSwitcher />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 flex flex-col items-center text-center">
+      <div className="relative z-10 container mx-auto px-4 py-8 flex flex-col items-center text-center">
         {/* Logo */}
         <img
           src={zodiarkLogo}
           alt="Zodiark"
-          className="w-80 md:w-[28rem] mb-8"
+          className="w-64 md:w-80 mb-4 md:mb-6"
         />
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-glow max-w-5xl leading-tight">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-glow max-w-5xl leading-tight">
           {t('hero.headline')}
         </h1>
 
         {/* Subheadline */}
         <p 
-          className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-10 max-w-2xl"
+          className="text-sm md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl"
           dangerouslySetInnerHTML={{ __html: t('hero.subheadline') }}
         />
 
@@ -78,7 +78,7 @@ export const Hero = () => {
         <Button
           size="lg"
           onClick={handleCtaClick}
-          className="group relative text-lg px-10 py-7 bg-primary hover:bg-primary text-primary-foreground shadow-cosmic transition-all hover:scale-105 hover:shadow-glow overflow-hidden font-bold animate-glow"
+          className="group relative text-base md:text-lg px-8 py-5 md:px-10 md:py-7 bg-primary hover:bg-primary text-primary-foreground shadow-cosmic transition-all hover:scale-105 hover:shadow-glow overflow-hidden font-bold animate-glow"
         >
           <span className="relative z-10 flex items-center gap-2">
             {t('hero.cta')}
