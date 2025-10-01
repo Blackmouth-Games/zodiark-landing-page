@@ -60,7 +60,7 @@ export const Hero = () => {
         <img
           src={zodiarkLogo}
           alt="Zodiark"
-          className="w-64 md:w-80 mb-4 md:mb-6"
+          className="w-80 md:w-[28rem] mb-4 md:mb-6"
         />
 
         {/* Headline */}
