@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "headline": "Despierta tu Destino, Elévate entre las Estrellas y Reclama el Premio del Arca",
+    "subheadline": "Comienza en Telegram para reclamar Drops Limitadas para los primeros usuarios.",
+    "cta": "Juega gratis"
+  },
+  "nav": {
+    "community": "Comunidad",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "x": "X"
+  },
+  "cookies": {
+    "banner": "Usamos cookies para mejorar tu experiencia y analizar nuestro tráfico.",
+    "accept": "Aceptar",
+    "learnMore": "Más información"
+  },
+  "footer": {
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "rights": "© 2025 Zodiark. Todos los derechos reservados."
+  },
+  "thankYou": {
+    "headline": "¡Bienvenido al Viaje Cósmico!",
+    "message": "Tu Huevo Astral te espera. Comienza tu evolución ahora.",
+    "cta": "Ir al servicio",
+    "cancel": "Cancelar"
+  }
+}

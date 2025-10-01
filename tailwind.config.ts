@@ -63,6 +63,19 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        cosmic: "var(--shadow-cosmic)",
+        glow: "var(--shadow-glow)",
+      },
+      backgroundImage: {
+        "gradient-cosmic": "var(--gradient-cosmic)",
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-glow": "var(--gradient-glow)",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
       keyframes: {
         "accordion-down": {
           from: {
