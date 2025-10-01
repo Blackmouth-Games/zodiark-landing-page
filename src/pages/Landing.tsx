@@ -8,7 +8,7 @@ export const Landing = () => {
 
   return (
     <TrackerProvider eventName="lp_page_view">
-      <div className="h-screen flex flex-col overflow-hidden">
+      <div className="h-[100svh] flex flex-col overflow-hidden">
         {/* Main Content */}
         <main className="flex-1 overflow-hidden">
           <Hero />
