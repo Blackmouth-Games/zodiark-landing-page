@@ -13,6 +13,13 @@ export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
 
+  const languageLabels: Record<string, string> = {
+    en: 'EN',
+    es: 'ES',
+    pt: 'PT',
+    hi: 'HI',
+  };
+
   const handleLanguageChange = (lang: Language) => {
     i18n.changeLanguage(lang);
     
@@ -26,13 +33,15 @@ export const LanguageSwitcher = () => {
 
   return (
     <Select value={i18n.language} onValueChange={handleLanguageChange}>
-      <SelectTrigger className="w-[80px] bg-background/50 border-border">
-        <SelectValue />
+      <SelectTrigger className="w-[90px] bg-background/50 backdrop-blur-sm border-border hover:bg-background/70 transition-colors">
+        <SelectValue>
+          {languageLabels[i18n.language] || 'EN'}
+        </SelectValue>
       </SelectTrigger>
       <SelectContent>
         {SUPPORTED_LANGUAGES.map((lang) => (
           <SelectItem key={lang} value={lang}>
-            {lang.toUpperCase()}
+            {languageLabels[lang]}
           </SelectItem>
         ))}
       </SelectContent>
