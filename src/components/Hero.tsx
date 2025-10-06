@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { tracker } from '@/utils/tracker';
+import { appendParamsToTelegramUrl } from '@/utils/utm';
 import oracleHero from '@/assets/oracle-hero.png';
 import zodiarkLogo from '@/assets/zodiark-logo.svg';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
@@ -13,7 +14,8 @@ export const Hero = () => {
 
   const handleCtaClick = () => {
     tracker.trackEvent('lp_click_button');
-    window.open(TELEGRAM_BOT_URL, '_blank', 'noopener,noreferrer');
+    const urlWithParams = appendParamsToTelegramUrl(TELEGRAM_BOT_URL);
+    window.open(urlWithParams, '_blank', 'noopener,noreferrer');
   };
 
   return (

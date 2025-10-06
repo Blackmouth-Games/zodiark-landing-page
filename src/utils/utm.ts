@@ -60,6 +60,34 @@ export const getUtm = (): UtmParams => {
 };
 
 /**
+ * Get all query parameters from current URL
+ */
+export const getAllQueryParams = (): Record<string, string> => {
+  const params = new URLSearchParams(window.location.search);
+  const allParams: Record<string, string> = {};
+  
+  params.forEach((value, key) => {
+    allParams[key] = value;
+  });
+  
+  return allParams;
+};
+
+/**
+ * Append all query parameters to Telegram bot URL with start parameter
+ */
+export const appendParamsToTelegramUrl = (baseUrl: string): string => {
+  const params = getAllQueryParams();
+  if (Object.keys(params).length === 0) return baseUrl;
+
+  const paramString = Object.entries(params)
+    .map(([key, value]) => `${key}=${value}`)
+    .join('&');
+
+  return `${baseUrl}?start=${paramString}`;
+};
+
+/**
  * Append UTM parameters to a URL (for internal navigation only)
  */
 export const appendUtmToUrl = (url: string, utm?: UtmParams): string => {
