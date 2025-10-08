@@ -7,6 +7,12 @@ import zodiarkLogo from '@/assets/zodiark-logo.svg';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { ExternalLink } from 'lucide-react';
 
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url: string) => boolean;
+  }
+}
+
 const TELEGRAM_BOT_URL = 'https://t.me/zodiark_astral_awakening_bot';
 
 export const Hero = () => {
@@ -15,7 +21,13 @@ export const Hero = () => {
   const handleCtaClick = () => {
     tracker.trackEvent('lp_click_button');
     const urlWithParams = appendParamsToTelegramUrl(TELEGRAM_BOT_URL);
-    window.open(urlWithParams, '_blank', 'noopener,noreferrer');
+    
+    // Google Ads conversion tracking
+    if (typeof window.gtag_report_conversion === 'function') {
+      window.gtag_report_conversion(urlWithParams);
+    } else {
+      window.open(urlWithParams, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (

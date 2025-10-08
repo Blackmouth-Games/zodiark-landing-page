@@ -25,6 +25,24 @@
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://lktrack.com" />
+    
+    <!-- Google Ads Conversion Tracking -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16724399082/Yi-WCJj70qgbEOqn6KY-',
+            'value': 1.0,
+            'currency': 'EUR',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
   </head>
 
   <body>
