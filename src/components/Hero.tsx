@@ -1,34 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-import { tracker } from '@/utils/tracker';
-import { appendParamsToTelegramUrl } from '@/utils/utm';
 import oracleHero from '@/assets/oracle-hero.png';
 import zodiarkLogo from '@/assets/zodiark-logo.svg';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
-import { ExternalLink } from 'lucide-react';
-
-declare global {
-  interface Window {
-    gtag_report_conversion?: (url: string) => boolean;
-  }
-}
-
-const TELEGRAM_BOT_URL = 'https://t.me/zodiark_astral_awakening_bot';
 
 export const Hero = () => {
   const { t } = useTranslation();
-
-  const handleCtaClick = () => {
-    tracker.trackEvent('lp_click_button');
-    const urlWithParams = appendParamsToTelegramUrl(TELEGRAM_BOT_URL);
-    
-    // Google Ads conversion tracking
-    if (typeof window.gtag_report_conversion === 'function') {
-      window.gtag_report_conversion(urlWithParams);
-    } else {
-      window.open(urlWithParams, '_blank', 'noopener,noreferrer');
-    }
-  };
 
   return (
     <section className="relative h-full flex items-center justify-center overflow-hidden">
@@ -87,19 +63,6 @@ export const Hero = () => {
           className="text-sm md:text-lg lg:text-xl text-muted-foreground mb-10 md:mb-14 max-w-2xl"
           dangerouslySetInnerHTML={{ __html: t('hero.subheadline') }}
         />
-
-        {/* CTA Button - Enhanced */}
-        <Button
-          size="lg"
-          onClick={handleCtaClick}
-          className="group relative text-xl md:text-lg px-10 py-7 md:px-10 md:py-7 bg-primary hover:bg-primary text-white md:text-primary-foreground shadow-cosmic transition-all hover:scale-105 hover:shadow-glow overflow-hidden font-bold animate-glow uppercase md:normal-case"
-        >
-          <span className="relative z-10 flex items-center gap-2">
-            {t('hero.cta')}
-            <ExternalLink className="w-6 h-6 md:w-5 md:h-5 transition-transform group-hover:translate-x-1" />
-          </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-        </Button>
       </div>
 
       {/* Bottom gradient overlay */}

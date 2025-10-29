@@ -1,8 +1,8 @@
 {
   "hero": {
-    "headline": "星座排列。你的旅程现在开始。",
+    "headline": "星座排列。旅程尚未开始。",
     "subheadline": "",
-    "cta": "立即游戏"
+    "cta": ""
   },
   "nav": {
     "community": "社区",
